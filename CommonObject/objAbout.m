@@ -24,10 +24,9 @@ function guiObj = objAbout(parent,fontsize,style,varargin)
                       'Name',[name,' About'],'DockControls','off',...
                       'Position',[0 0 430 310],'Resize','off', 'Tag','gui_main','Visible','off','CloseRequestFcn',@onClose);
     	movegui(guiObj.main,'center');
-%         iptwindowalign(ancestor(parent,'figure','toplevel'), 'left', guiObj.main, 'right');
         
-    imgData = imread('gsicht.png');%imresize(imread('gsicht.png'),1);   % or: imread(URL)
-    guiObj.Gsicht = uicontrol('parent',guiObj.main,'Position',[5 5 size(imgData,2) size(imgData,1)],'CData',imgData,'Interruptible','off');
+    imgData = imread('logo.png');
+    guiObj.logo = uicontrol('parent',guiObj.main,'Position',[5 5 size(imgData,2) size(imgData,1)],'CData',imgData,'Interruptible','off');
                    
     for n1 = 1:length(text)
         guiObj.(['txt',num2str(n1)]) = uicontrol('Parent',guiObj.main,'Style','text','Units','pixels',...
