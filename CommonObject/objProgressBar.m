@@ -18,7 +18,7 @@ function [guiObj,newObj] = objProgressBar(parent,position,fontsize,style,log)
     %# switch between different postition lengths
     switch length(position)
         case 2
-            position = [position(1) position(2) 415 25];
+            position = [position(1) position(2) 525 25];
         case 3
             position = [position(1) position(2) position(3) 25];
         case 4
